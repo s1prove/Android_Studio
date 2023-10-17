@@ -18,19 +18,20 @@ class Activity2 : ComponentActivity() {
             startActivity(intent2)
         }
 
-        val animal = DataHolder.selectedAnimal
-        if (animal != null) {
-            val animalImage = findViewById<ImageView>(R.id.imageView)
-            val animalName = findViewById<TextView>(R.id.textViewFor1)
-            val animalBreed = findViewById<TextView>(R.id.textViewFor3)
-            val animalDescription = findViewById<TextView>(R.id.textViewFor2)
+        val animalName = intent.getStringExtra("animalName")
+        val animalDescription = intent.getStringExtra("animalDescription")
+        val animalBreedText = intent.getStringExtra("breed")
+        val animalImageResId = intent.getIntExtra("animalImageResId", 1)
+
+        val animalImage = findViewById<ImageView>(R.id.imageView)
+        val animalNameView = findViewById<TextView>(R.id.textViewFor1)
+        val animalBreed = findViewById<TextView>(R.id.textViewFor3)
+        val animalDescriptionView = findViewById<TextView>(R.id.textViewFor2)
 
 
-            animalImage.setImageResource(animal.imageResId)
-            animalName.text = animal.name
-            animalBreed.text = animal.breed
-            animalDescription.text = animal.description
+        animalImage.setImageResource(animalImageResId)
+        animalNameView.text = animalName
+        animalBreed.text = animalBreedText
+        animalDescriptionView.text = animalDescription
         }
-
-    }
 }
