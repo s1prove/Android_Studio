@@ -5,7 +5,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import com.example.androidapp.classes.Food
 import com.example.androidapp.classes.Indian
@@ -17,7 +16,7 @@ class FirstFragment : Fragment() {
 
     lateinit var binding: FragmentFirstBinding
 
-    lateinit var adapter: AnimalAdapter
+    lateinit var adapter: FoodAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -56,8 +55,8 @@ class FirstFragment : Fragment() {
                 "fried dough, with various other ingredients. The original chaat is a mixture of potato pieces, crisp fried bread dahi vada or dahi bhalla, gram " +
                 "or chickpeas and tangy-salty spices, with sour Indian chili" , R.drawable.chaat))
 
-        adapter = AnimalAdapter(){animal, position ->
-            findNavController().navigate(FirstFragmentDirections.actionFirstFragmentToSecondFragment(animal.name, animal.description, animal.image))
+        adapter = FoodAdapter(){ food, position ->
+            findNavController().navigate(FirstFragmentDirections.actionFirstFragmentToSecondFragment(food.name, food.description, food.image))
         }
         adapter.setList(list)
         binding.rv.adapter = adapter
