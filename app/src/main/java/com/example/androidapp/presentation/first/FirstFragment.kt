@@ -38,7 +38,7 @@ class FirstFragment : Fragment() {
         list.add(Country("Kyiv", "Ukraine", "Kyiv", R.drawable.kyiv, "50", "30"))
         list.add(Country("Tirane", "Albania", "Tirane", R.drawable.tirane, "40", "20"))
         list.add(Country("Tripoli", "Libya", "Tripoli", R.drawable.tripoli, "25", "15"))
-        list.add(Country("Madrid", "Spain", "Kyiv" , R.drawable.madrid, "40", "5"))
+        list.add(Country("Madrid", "Spain", "Madrid" , R.drawable.madrid, "40", "5"))
         list.add(Country("Tunis", "Tunis", "Tunis" , R.drawable.tunis, "35", "10"))
 
 
