@@ -4,22 +4,22 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.example.androidapp.classes.Food
+import com.example.androidapp.classes.Country
 import com.example.androidapp.databinding.ItemAnimalBinding
 
-class FoodAdapter(
-    val onClick:(food: Food, position: Int) -> Unit
-) : RecyclerView.Adapter<FoodAdapter.FoodViewHolder>() {
+class CountryAdapter(
+    val onClick:(country: Country, position: Int) -> Unit
+) : RecyclerView.Adapter<CountryAdapter.FoodViewHolder>() {
 
-    private val list = ArrayList<Food>()
+    private val list = ArrayList<Country>()
 
-    fun setList(newList: List<Food>){
+    fun setList(newList: List<Country>){
         list.clear()
         list.addAll(newList)
         notifyDataSetChanged()
     }
     inner class FoodViewHolder(val binding: ItemAnimalBinding) : RecyclerView.ViewHolder(binding.root){
-        fun bind(element:Food, position: Int){
+        fun bind(element:Country, position: Int){
             binding.Name.text = element.name
             binding.Description.text = element.country
             binding.btn.setOnClickListener{
