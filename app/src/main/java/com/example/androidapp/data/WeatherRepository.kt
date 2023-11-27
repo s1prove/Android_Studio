@@ -8,8 +8,9 @@ object WeatherRepository {
     private val api = ApiFactory.weatherApi
     private val API_KEY = "7d31fa3d928db13433eed3fa0aef859a"
 
-    suspend fun getWeather(lat: String = "48.0", lon: String = "35.0"): WeatherApiModel?{
+//    suspend fun getWeather(lat: String = "48.0", lon: String = "35.0"): WeatherApiModel?{
 
+    suspend fun getWeather(lat: String, lon: String): WeatherApiModel?{
         val params = HashMap<String, String>()
         params.put("lat", lat)
         params.put("lon", lon)

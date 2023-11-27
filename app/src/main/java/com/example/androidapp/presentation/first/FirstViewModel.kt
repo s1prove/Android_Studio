@@ -1,15 +1,13 @@
-package com.example.androidapp.presentation.second
+package com.example.androidapp.presentation.first
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.androidapp.Animal1
 import com.example.androidapp.data.remote.model.WeatherApiModel
 import com.example.androidapp.domain.weather.WeatherUseCase
 import kotlinx.coroutines.launch
 
-class SecondViewModel : ViewModel() {
-
+class FirstViewModel: ViewModel() {
 
     private val weatherUseCase = WeatherUseCase
 
@@ -17,7 +15,7 @@ class SecondViewModel : ViewModel() {
     val isLoading = MutableLiveData<Boolean>()
 
 
-    fun getWeather(lat: String, lon: String) {
+    fun getWeather1(lat: String, lon: String) {
         viewModelScope.launch {
             isLoading.postValue(true)
 

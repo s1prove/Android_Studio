@@ -14,7 +14,7 @@
         android:layout_marginTop="12dp"
         android:textSize="30sp"
         android:textColor="@color/white"
-        android:text="Geographic coordinates\n of countries"
+        android:text="Weather in different \n countries"
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

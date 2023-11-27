@@ -42,7 +42,10 @@ class SecondFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val args: SecondFragmentArgs by navArgs()
-        val first_tv = view.findViewById<TextView>(R.id.country)
+        val temp_tv = view.findViewById<TextView>(R.id.temp)
+        val feel_tv = view.findViewById<TextView>(R.id.feels_like)
+        val cloud_tv = view.findViewById<TextView>(R.id.clouds)
+        val wind_tv = view.findViewById<TextView>(R.id.wind_speed)
         val second_tv = view.findViewById<TextView>(R.id.name)
         val img = view.findViewById<ImageView>(R.id.img)
         val swipe = view.findViewById<SwipeRefreshLayout>(R.id.swipe)
@@ -50,12 +53,12 @@ class SecondFragment : Fragment() {
 
         val lat = args.lat
         val lon = args.lon
-//      val string1 = args.name
+        val string1 = args.name
         val string2 = args.description
         val img1 = args.image
 //
 //        first_tv.text = string1
-        second_tv.text = string2
+//        second_tv.text = string2
         img.setImageResource(img1)
 
 
@@ -70,7 +73,16 @@ class SecondFragment : Fragment() {
         }
 
         viewModel.weatherLd.observe(viewLifecycleOwner){
-            first_tv.text = it
+            second_tv.text = it?.timezone
+
+            temp_tv.text = it?.current?.temp.toString() + "°C"
+
+            feel_tv.text = it?.current?.feels_like.toString() + "°C"
+
+            cloud_tv.text = it?.current?.clouds.toString() + "%"
+
+            wind_tv.text = it?.current?.wind_speed.toString() + "m/s"
+
         }
         viewModel.isLoading.observe(viewLifecycleOwner){
             if(!it)

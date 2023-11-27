@@ -35,7 +35,7 @@ class FirstFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val list = ArrayList<Country>()
-        list.add(Country("Kyiv", "Ukraine", "Kyiv", R.drawable.kyiv, "50", "30"))
+        list.add(Country("Kyiv", "Ukraine", "Kyiv", R.drawable.kyiv, "50.27", "30.31"))
         list.add(Country("Tirane", "Albania", "Tirane", R.drawable.tirane, "40", "20"))
         list.add(Country("Tripoli", "Libya", "Tripoli", R.drawable.tripoli, "25", "15"))
         list.add(Country("Madrid", "Spain", "Madrid" , R.drawable.madrid, "40", "5"))

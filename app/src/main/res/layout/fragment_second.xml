@@ -7,67 +7,160 @@
     android:background="@color/white"
     tools:context=".presentation.second.SecondFragment">
 
-   <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
-       android:layout_width="match_parent"
-       android:layout_height="match_parent"
-       android:id="@+id/swipe">
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipe"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        tools:layout_editor_absoluteX="-129dp">
 
-       <androidx.constraintlayout.widget.ConstraintLayout
-           android:layout_width="match_parent"
-           android:layout_height="match_parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-           <TextView
-               android:id="@+id/name"
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:text="Name"
-               android:layout_margin="20dp"
-               android:textColor="@color/black"
-               android:textSize="38sp"
-               android:textStyle="bold"
-               app:layout_constraintEnd_toEndOf="parent"
-               app:layout_constraintStart_toStartOf="parent"
-               app:layout_constraintTop_toBottomOf="@id/img"/>
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
 
-           <Button
-               android:id="@+id/buttonTo1"
-               android:layout_width="150dp"
-               android:layout_height="wrap_content"
-               android:text="Back"
-               android:background="@color/two"
-               android:textColor="@color/white"
-               android:layout_marginBottom="24dp"
-               android:textSize="20sp"
-               app:layout_constraintEnd_toEndOf="parent"
-               app:layout_constraintStart_toStartOf="parent"
-               app:layout_constraintBottom_toBottomOf="parent"/>
+                android:text="Name"
+                android:textColor="@color/black"
+                android:textSize="38sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/img" />
 
-           <TextView
-               android:id="@+id/country"
-               android:layout_width="match_parent"
-               android:layout_height="wrap_content"
-               android:layout_marginHorizontal="20dp"
-               android:layout_marginTop="12dp"
-               android:text="Coordinates"
-               android:textColor="@color/grey"
-               android:textSize="25sp"
-               app:layout_constraintStart_toStartOf="@id/name"
-               app:layout_constraintTop_toBottomOf="@id/name" />
+            <Button
+                android:id="@+id/buttonTo1"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:background="@color/two"
+                android:text="Back"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
 
-           <ImageView
-               android:id="@+id/img"
-               android:layout_width="250dp"
-               android:layout_height="200dp"
-               android:background="@drawable/shape4"
-               android:scaleType="fitXY"
-               app:layout_constraintTop_toTopOf="parent"
-               app:layout_constraintEnd_toEndOf="parent"
-               app:layout_constraintStart_toStartOf="parent"
-               android:src="@drawable/shamrock_macaw"
-               android:layout_marginVertical="30dp" />
+            <TextView
+                android:id="@+id/temp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="34dp"
+                android:layout_marginLeft="220dp"
+                android:text="Temperature"
+                android:textColor="@color/grey"
+                android:textSize="25sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/name" />
 
-       </androidx.constraintlayout.widget.ConstraintLayout>
+            <TextView
+                android:id="@+id/feels_like"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="34dp"
+                android:layout_marginLeft="220dp"
+                android:text="Fells like"
+                android:textColor="@color/grey"
+                android:textSize="25sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/temp" />
 
-   </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+            <TextView
+                android:id="@+id/clouds"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="220dp"
+                android:layout_marginTop="34dp"
+                android:text="Clouds"
+                android:textColor="@color/grey"
+                android:textSize="25sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/feels_like" />
+
+            <TextView
+                android:id="@+id/wind_speed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="220dp"
+                android:layout_marginTop="34dp"
+                android:text="Wind Speed"
+                android:textColor="@color/grey"
+                android:textSize="25sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/clouds" />
+
+            <TextView
+                android:id="@+id/temp2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="34dp"
+                android:layout_marginRight="200dp"
+                android:text="Temperature:"
+                android:textColor="@color/grey"
+                android:textSize="25sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/name" />
+
+            <TextView
+                android:id="@+id/feels_like2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="34dp"
+                android:layout_marginRight="200dp"
+                android:text="Feels like:"
+                android:textColor="@color/grey"
+                android:textSize="25sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/temp" />
+
+            <TextView
+                android:id="@+id/clouds2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="34dp"
+                android:layout_marginRight="200dp"
+                android:text="Clouds:"
+                android:textColor="@color/grey"
+                android:textSize="25sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/feels_like" />
+
+            <TextView
+                android:id="@+id/wind_speed1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="34dp"
+                android:layout_marginRight="200dp"
+                android:text="Wind Speed:"
+                android:textColor="@color/grey"
+                android:textSize="25sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/clouds" />
+
+            <ImageView
+                android:id="@+id/img"
+                android:layout_width="250dp"
+                android:layout_height="200dp"
+                android:layout_marginVertical="30dp"
+                android:background="@drawable/shape4"
+                android:scaleType="fitXY"
+                android:src="@drawable/shamrock_macaw"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
