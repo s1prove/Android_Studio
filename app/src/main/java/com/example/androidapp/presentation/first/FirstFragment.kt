@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.example.androidapp.CountryAdapter
 import com.example.androidapp.R
-import com.example.androidapp.classes.Country
+import com.example.androidapp.data.local.Country
 import com.example.androidapp.databinding.FragmentFirstBinding
 
 class FirstFragment : Fragment() {
@@ -34,12 +34,7 @@ class FirstFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val list = ArrayList<Country>()
-        list.add(Country("Kyiv", "Ukraine", "Kyiv", R.drawable.kyiv, "50.27", "30.31"))
-        list.add(Country("Tirane", "Albania", "Tirane", R.drawable.tirane, "40", "20"))
-        list.add(Country("Tripoli", "Libya", "Tripoli", R.drawable.tripoli, "25", "15"))
-        list.add(Country("Madrid", "Spain", "Madrid" , R.drawable.madrid, "40", "5"))
-        list.add(Country("Tunis", "Tunis", "Tunis" , R.drawable.tunis, "35", "10"))
+        val list = Country.createCountryList()
 
 
         adapter = CountryAdapter(){ country, position ->

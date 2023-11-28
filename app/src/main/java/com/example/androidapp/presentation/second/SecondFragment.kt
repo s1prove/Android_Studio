@@ -35,7 +35,7 @@ class SecondFragment : Fragment() {
         // Inflate the layout for this fragment
         binding = FragmentSecondBinding.inflate(inflater, container, false)
         viewModel = ViewModelProvider(this).get(SecondViewModel::class.java)
-        return inflater.inflate(R.layout.fragment_second, container, false)
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -50,16 +50,7 @@ class SecondFragment : Fragment() {
         val img = view.findViewById<ImageView>(R.id.img)
         val swipe = view.findViewById<SwipeRefreshLayout>(R.id.swipe)
 
-
-        val lat = args.lat
-        val lon = args.lon
-        val string1 = args.name
-        val string2 = args.description
-        val img1 = args.image
-//
-//        first_tv.text = string1
-//        second_tv.text = string2
-        img.setImageResource(img1)
+        img.setImageResource(args.image)
 
 
 
@@ -68,9 +59,8 @@ class SecondFragment : Fragment() {
         }
 
 
-        lifecycleScope.launch {
-            viewModel.getWeather(lat, lon)
-        }
+        viewModel.getWeather(args.lat, args.lon)
+
 
         viewModel.weatherLd.observe(viewLifecycleOwner){
             second_tv.text = it?.timezone

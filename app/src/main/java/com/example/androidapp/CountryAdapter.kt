@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.example.androidapp.classes.Country
+import com.example.androidapp.data.local.Country
 import com.example.androidapp.databinding.ItemAnimalBinding
 
 class CountryAdapter(
@@ -19,7 +19,7 @@ class CountryAdapter(
         notifyDataSetChanged()
     }
     inner class FoodViewHolder(val binding: ItemAnimalBinding) : RecyclerView.ViewHolder(binding.root){
-        fun bind(element:Country, position: Int){
+        fun bind(element: Country, position: Int){
             binding.Name.text = element.name
             binding.Description.text = element.country
             binding.btn.setOnClickListener{
