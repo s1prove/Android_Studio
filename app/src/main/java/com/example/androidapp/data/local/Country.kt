@@ -6,11 +6,11 @@ class Country (val name: String, val country: String, val description: String, v
     companion object {
         fun createCountryList(): List<Country> {
             return listOf(
-                Country("Kyiv", "Ukraine", "Kyiv", R.drawable.kyiv, "50.27", "30.31"),
-                Country("Tirane", "Albania", "Tirane", R.drawable.tirane, "40", "20"),
-                Country("Tripoli", "Libya", "Tripoli", R.drawable.tripoli, "25", "15"),
-                Country("Madrid", "Spain", "Madrid", R.drawable.madrid, "40", "5"),
-                Country("Tunis", "Tunis", "Tunis", R.drawable.tunis, "35", "10")
+                Country("Kharkiv", "Ukraine", "Kharkiv", R.drawable.kyiv, "49.98", "36.23"),
+                Country("Tirana", "Albania", "Tirana", R.drawable.tirane, "41.32", "19.81"),
+                Country("Rabak", "Libya", "Rabak", R.drawable.tripoli, "13.18", "32.88"),
+                Country("Madrid", "Spain", "Madrid", R.drawable.madrid, "40.41", "-3.70"),
+                Country("Sbikha", "Tunis", "Sbikha", R.drawable.tunis, "36", "10")
             )
         }
     }

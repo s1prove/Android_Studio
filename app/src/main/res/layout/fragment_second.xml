@@ -12,9 +12,10 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        tools:layout_editor_absoluteX="-129dp">
+        app:layout_constraintVertical_bias="1.0">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -51,8 +52,8 @@
                 android:id="@+id/temp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="34dp"
                 android:layout_marginLeft="220dp"
+                android:layout_marginTop="34dp"
                 android:text="Temperature"
                 android:textColor="@color/grey"
                 android:textSize="25sp"
@@ -63,8 +64,8 @@
                 android:id="@+id/feels_like"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="34dp"
                 android:layout_marginLeft="220dp"
+                android:layout_marginTop="34dp"
                 android:text="Fells like"
                 android:textColor="@color/grey"
                 android:textSize="25sp"
@@ -72,28 +73,28 @@
                 app:layout_constraintTop_toBottomOf="@+id/temp" />
 
             <TextView
-                android:id="@+id/clouds"
+                android:id="@+id/pressure"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="220dp"
                 android:layout_marginTop="34dp"
-                android:text="Clouds"
+                android:text="Pressure"
                 android:textColor="@color/grey"
                 android:textSize="25sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/feels_like" />
 
             <TextView
-                android:id="@+id/wind_speed"
+                android:id="@+id/humidity"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="220dp"
                 android:layout_marginTop="34dp"
-                android:text="Wind Speed"
+                android:text="Humidity"
                 android:textColor="@color/grey"
                 android:textSize="25sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/clouds" />
+                app:layout_constraintTop_toBottomOf="@+id/pressure" />
 
             <TextView
                 android:id="@+id/temp2"
@@ -122,12 +123,12 @@
                 app:layout_constraintTop_toBottomOf="@+id/temp" />
 
             <TextView
-                android:id="@+id/clouds2"
+                android:id="@+id/pressure2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="34dp"
                 android:layout_marginRight="200dp"
-                android:text="Clouds:"
+                android:text="Pressure:"
                 android:textColor="@color/grey"
                 android:textSize="25sp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -135,17 +136,17 @@
                 app:layout_constraintTop_toBottomOf="@+id/feels_like" />
 
             <TextView
-                android:id="@+id/wind_speed1"
+                android:id="@+id/humidity1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="34dp"
                 android:layout_marginRight="200dp"
-                android:text="Wind Speed:"
+                android:layout_marginTop="34dp"
+                android:text="Humidity:"
                 android:textColor="@color/grey"
                 android:textSize="25sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/clouds" />
+                app:layout_constraintTop_toBottomOf="@+id/pressure" />
 
             <ImageView
                 android:id="@+id/img"

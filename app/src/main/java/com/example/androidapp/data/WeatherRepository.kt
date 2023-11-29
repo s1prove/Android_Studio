@@ -6,7 +6,8 @@ import com.example.androidapp.data.remote.model.WeatherApiModel
 object WeatherRepository {
 
     private val api = ApiFactory.weatherApi
-    private val API_KEY = "7d31fa3d928db13433eed3fa0aef859a"
+    private val API_KEY = "4ee42fb04770cf4cde4aa93b723e196e"
+
 
 //    suspend fun getWeather(lat: String = "48.0", lon: String = "35.0"): WeatherApiModel?{
 

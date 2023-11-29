@@ -3,6 +3,6 @@ package com.example.androidapp.data.remote.model
 data class WeatherApiModel (
     val lon: Float?,
     val lat: Float?,
-    val timezone: String?,
-    val current: CurrentWeatherApiModel
+    val main: CurrentWeatherApiModel,
+    val name: String?
 )

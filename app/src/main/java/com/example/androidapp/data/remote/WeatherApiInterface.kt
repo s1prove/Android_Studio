@@ -8,6 +8,6 @@ import retrofit2.http.QueryMap
 interface WeatherApiInterface {
 
 
-    @GET("onecall")
+    @GET("weather")
     suspend fun getWeather(@QueryMap params: Map<String, String>): Response<WeatherApiModel>
 }
