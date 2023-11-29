@@ -64,15 +64,15 @@ class SecondFragment : Fragment() {
 
         viewModel.weatherLd.observe(viewLifecycleOwner){
 
-            temp_tv.text = it?.main?.temp.toString() + "°C"
+            temp_tv.text = it?.main?.temp
 
-            feel_tv.text = it?.main?.feels_like.toString() + "°C"
+            feel_tv.text = it?.main?.feels_like
 
             second_tv.text = it?.name
 
-            pressure_tv.text = it?.main?.pressure.toString() + "%"
+            pressure_tv.text = it?.main?.pressure
 
-            humidity_tv.text = it?.main?.humidity.toString() + "m/s"
+            humidity_tv.text = it?.main?.humidity
 
         }
         viewModel.isLoading.observe(viewLifecycleOwner){
